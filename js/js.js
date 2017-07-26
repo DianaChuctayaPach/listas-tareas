@@ -1,7 +1,8 @@
 
     function añadir() {
-            // var list=document.getElementById('mas-listas').value;
-            // document.getElementById('mostrar').innerHTML=list;
+            var list=document.getElementById('mas-listas').value;
+            document.getElementById('mostrar').innerHTML=list;
+    }
         var arrayDatos=[
     {
         "userId": 1,
@@ -69,17 +70,19 @@
 
         var dato_1 = arrayDatos[i];
         // //alert (dato_1);
-        // html += s; 
-        for (var html =0; html<arrayDatos.length;html++){
+        
+        // for (var html =0; html<arrayDatos.length;html++){
         var s = "<div>" + 
             "<h3>" +  "List: " + dato_1.title + "</h3>" +"<h3>"+ "Number: " + dato_1.id + "</h3>"
         "</div>";
-        var printAll= s //document.getElementById('add');
-        printAll.onclick =function () {
-         printHTML(mergeHTML());
-        }
+        document.write(s);
+        // var printAll= s //document.getElementById('add');
+        // printAll.onclick =function () {
+        //  printHTML(mergeHTML());
+        // }
+        html += s; 
         document.getElementById('mostrar').innerHTML=s;
         }
 
-    }
-    }
+    
+    
