@@ -1,8 +1,21 @@
-
-    function añadir() {
-            var list=document.getElementById('mas-listas').value;
-            document.getElementById('mostrar').innerHTML=list;
+    var Notas=new Array(20);
+    var N =1;
+    var nuevalistaOuput =document.getElementById('nuevalista');
+    var newlista=document.getElementById('mas-listas').value;
+     for(var i=0;i<N;i++){
+         Notas[i]=undefined;
+     }
+ 
+    var addnota=document.getElementById('add');
+    addnota.onclick=function () {
+        var newlista=document.getElementById('mas-listas').value;
+         console.log(newlista)
+         
+        Notas.end(newlista);
+         document.getElementById('nuevalista').innerHTML="<br>"+ Notas +'<br>';
     }
+     console.log(newlista)
+     console.log(Notas)      
         var arrayDatos=[
     {
         "userId": 1,
@@ -75,13 +88,10 @@
         var s = "<div>" + 
             "<h3>" +  "List: " + dato_1.title + "</h3>" +"<h3>"+ "Number: " + dato_1.id + "</h3>"
         "</div>";
-        document.write(s);
-        // var printAll= s //document.getElementById('add');
-        // printAll.onclick =function () {
-        //  printHTML(mergeHTML());
-        // }
+        // document.write(s);
+     
         html += s; 
-        document.getElementById('mostrar').innerHTML=s;
+        document.getElementById('mostrar').innerHTML=html;
         }
 
     
