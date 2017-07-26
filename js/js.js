@@ -66,29 +66,28 @@
 
         var dato_1 = arrayDatos[i];
      
-        var s = "<div>" + 
-            "<h3>" +  "List: " + dato_1.title + "</h3>" +"<h3>"+ "Number: " + dato_1.id + "</h3>"
-        "</div>";
+        var s =  "<li>" +  "List: " + dato_1.title + "</li>" +"<li>"+ "Number: " + dato_1.id + "</li>"
+        ;
         
      
         html += s; 
         document.getElementById('mostrar').innerHTML=html;
         
     }
+    var newlista=[];
     function añadir() {
-    // // var array=[];
-    // var nuevalista=' ';
-    var nota=document.getElementById('mas-listas').Value
-    // nuevalista.push(nota);
-    
-    // for(i in array){
-    //     nuevalista +=' . '+array[i].slice(0,1);
-    // }
-    // document.getElementById('nuevalista'),innerHTML = nuevalista;
-    // nota = '';
-    arrayDatos.push(nota);
-        //  document.getElementById('nuevalista').innerHTML="<br>"+ Notas +'<br>';
-}     
+        var nota=document.getElementById('mas-listas').value
+    var add = document.createElement("li");
+    var contenido = document.createTextNode(nota); 
+     add.appendChild(contenido);
+    document.getElementById("mostrar").appendChild(add);
+     
 
+    }  
     
+
+     
+     
+
+
     
